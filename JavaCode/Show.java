@@ -7,6 +7,13 @@ public class Show {
     int startTime;
     List<Integer> bookedSeats = new ArrayList<>();
 
+    public Show(String showId, Movie movie, Screen screen, int startTime) {
+        this.showID = showId;
+        this.movie = movie;
+        this.screen = screen;
+        this.startTime = startTime;
+    }
+
     public String getShowID() {
         return showID;
     }

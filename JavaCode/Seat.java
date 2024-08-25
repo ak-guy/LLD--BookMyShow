@@ -5,6 +5,11 @@ public class Seat {
     int row;
     SeatCategory seatCategory;
 
+    public Seat(int seatID, SeatCategory seatCategory) {
+        this.seatID = seatID;
+        this.seatCategory = seatCategory;
+    }
+
     public int getSeatID() {
         return seatID;
     }

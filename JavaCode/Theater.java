@@ -1,11 +1,18 @@
 import java.util.*;
 
+import Enum.City;
+
 public class Theater {
     String theaterID;
     String address;
     City city;
     List<Screen> screenList = new ArrayList<>();
     List<Show> showsList = new ArrayList<>();
+
+    public Theater(String theaterID, City city) {
+        this.theaterID = theaterID;
+        this.city = city;
+    }
 
     public String getTheaterID() {
         return theaterID;

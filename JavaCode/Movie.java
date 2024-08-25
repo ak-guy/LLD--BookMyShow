@@ -6,6 +6,13 @@ public class Movie {
     int duration;
     MovieCategory movieCategory;
 
+    public Movie(String movieID, String movieName) {
+        this.movieID = movieID;
+        this.movieName = movieName;
+        this.duration = 120;
+        this.movieCategory = MovieCategory.ACTION;
+    }
+
     public String getMovieID() {
         return movieID;
     }
