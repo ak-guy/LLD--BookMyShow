@@ -14,13 +14,13 @@ public class BookMyShow {
         BookMyShow bookMyShow = new BookMyShow();
         bookMyShow.initialize();
 
-        bookMyShow.createBooking(City.BANGALORE, "Tere2");
+        bookMyShow.createBooking(City.BANGALORE, "Tere 2");
 
     }
 
     public void createBooking(City city, String movieName) {
         List<Movie> moviesAvailableInCity = movieController.getMoviesByCity(city);
-
+        System.out.println(moviesAvailableInCity);
         Movie possibleMovie = null;
         for (Movie movie : moviesAvailableInCity) {
             if (movie.getMovieName().equals(movieName)) {
@@ -54,6 +54,7 @@ public class BookMyShow {
             booking.setShow(selectedShow);
 
             // handle payment
+            booking.setPayment(new Payement() {});
             booking.getPayment().makePayment(1, 211);
 
         } else {
@@ -71,7 +72,7 @@ public class BookMyShow {
 
     public void createTheaters() {
         Movie tere = movieController.getMovieByName("Tere");
-        Movie tere2 = movieController.getMovieByName("Tere2");
+        Movie tere2 = movieController.getMovieByName("Tere 2");
 
         Theater inox = new Theater("T-0001", City.BANGALORE);
         inox.setScreenList(getScreenList());
